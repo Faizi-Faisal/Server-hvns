@@ -16,14 +16,14 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:5173", // Replace with frontend URL
+    origin: "https://heavenslivingtest.netlify.app/", // Replace with frontend URL
     methods: ["GET", "POST"]
   }
 });
 
 // Use CORS middleware
 app.use(cors({
-  origin: "http://localhost:5173", // Replace with frontend URL
+  origin: "https://heavenslivingtest.netlify.app/", // Replace with frontend URL
 }));
 
 app.use(express.json());
